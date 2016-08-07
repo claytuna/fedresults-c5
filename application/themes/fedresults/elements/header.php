@@ -4,25 +4,30 @@ $as = new GlobalArea('Header Search');
 $blocks = $as->getTotalBlocksInArea();
 $displayThirdColumn = $blocks > 0 || $c->isEditMode();
 ?>
-
-<header>
+<div class="header-search" role="search">
     <div class="container">
         <div class="row">
-            <div class="col-sm-4 col-xs-6">
+          <?php if ($displayThirdColumn) { ?>
+              <div class="col-xs-12 col-sm-4 col-sm-offset-8"><?php $as->display(); ?></div>
+          <?php } ?>
+        </div>
+    </div>
+</div>
+<header class="header-nav" role="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-sm-3">
                 <?php
                 $a = new GlobalArea('Header Site Logo');
                 $a->display();
                 ?>
             </div>
-            <div class="<?php if ($displayThirdColumn) { ?>col-sm-5 col-xs-6<?php } else { ?>col-sm-8 col-xs-6<?php } ?>">
+            <div class="col-xs-8 col-sm-9" role="navigation">
                 <?php
                 $a = new GlobalArea('Header Navigation');
                 $a->display();
                 ?>
             </div>
-            <?php if ($displayThirdColumn) { ?>
-                <div class="col-sm-3 col-xs-12"><?php $as->display(); ?></div>
-            <?php } ?>
         </div>
     </div>
 </header>

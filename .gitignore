@@ -1,1 +1,2 @@
-/application/files/cache
+/application/files/cache/*
+/application/files/

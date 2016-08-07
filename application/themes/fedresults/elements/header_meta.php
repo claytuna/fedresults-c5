@@ -10,4 +10,4 @@
 </head>
 <body>
 
-<div class="<?php echo $c->getPageWrapperClass()?>"><!--OPEN PAGEWRAP CLASS; see footer for closing-->
+<div class="fedresults <?php echo $c->getPageWrapperClass()?>"><!--OPEN PAGEWRAP CLASS; see footer for closing-->

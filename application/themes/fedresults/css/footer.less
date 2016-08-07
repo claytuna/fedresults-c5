@@ -1,0 +1,19 @@
+@import "var";
+
+.footer {
+  color: @grayMed;
+  height: 80px;
+
+  &__left {
+    padding-top:10px;    
+  }
+
+  &__right {
+    text-align: center;
+    line-height: 80px;
+
+    @media @tablet-up {
+      text-align: right;
+    }
+  }
+}
