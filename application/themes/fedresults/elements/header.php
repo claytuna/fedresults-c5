@@ -7,7 +7,7 @@ $displayThirdColumn = $blocks > 0 || $c->isEditMode();
 <div class="header-search" role="search">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-6 col-sm-offset-6">
+            <div class="col-xs-12 col-sm-9 col-sm-offset-3">
                 <div class="header-search__group">
                     <div class="header-search__text"><p><a href="mailto:sales@fedresults.com">sales@fedresults.com</a> <a href="tel:703-889-8700">703-889-8700</a></p></div>
                     <div class="header-search__nav"><?php $as->display(); ?></div>
