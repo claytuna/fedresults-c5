@@ -4,11 +4,124 @@
   background: @grayBlack;
   border-bottom: 1px solid #000;
   color: @grayMed;
-  height: 40px;
+
+  @media @tablet-up {
+    height: 40px;
+  }
+
+  &__group {
+    @media @tablet-up {
+      float: right;
+    }
+  }
+
+  &__text, &__nav, &__icons {
+    display: block;
+    width: 100%;
+
+    @media @tablet-up {
+      display: inline-block;
+      width: auto;
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    a {
+      color: #b2b2b2;
+      padding-right: 8px;
+    }
+  }
+
+  &__nav {
+    margin-right: 5px;
+
+    input[type="text"] {
+      background: #363636;
+      border:0px;
+      color: #7f7f7f;
+      height: @sm-height;
+      line-height: @sm-height;
+      top:1px;
+      position:relative;
+      width: 89%;
+    }
+
+    input[type="submit"] {
+      background:@fedRed;
+      height: @sm-height;
+      line-height: @sm-height;
+      padding: 0 12px;
+      text-indent:-9999em;
+      border: 0;
+      border-radius: 0;
+      margin: 0 0 0 -4px;
+      width: @sm-height;
+    }
+
+    @media @tablet-up {
+        input[type="text"] {
+          margin-top: 5px;
+          max-width: 130px;
+        }
+
+        input[type="submit"] {
+          max-width: 130px;
+        }
+    }
+  }
+
+  &__icons {
+    text-align: center;
+    padding: 10px 0;
+
+    @media @tablet-up {
+      text-align: left;
+      padding: 0;
+    }
+  }
+
 }
 
 .header-nav {
   background: @grayDark;
   color: @grayMed;
-  height: 90px;
+
+  .nav {
+
+    li {
+
+      @media @tablet-up {
+        display: inline-block;
+      }
+
+      a {
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: background .3s ease-out;
+
+        &:hover, &:active {
+          background: @fedRed;
+        }
+
+        @media @tablet-up {
+          display: inline-block;
+          height: 90px;
+          line-height: 90px;
+          padding: 0 18px;
+        }
+      }
+    }
+
+    li.nav-selected {
+      a { background: @fedRed; }
+    }
+
+    @media @tablet-up {
+      float: right;
+      overflow: hidden;
+    }
+  }
 }

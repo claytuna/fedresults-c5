@@ -2,12 +2,19 @@
 
 @import "./header.less";
 @import "./footer.less";
+@import "./btn.less";
 
 body {
   background: @grayBlack;
 }
 
-main {
-  background: #fff;
-  min-height: 150px;
+.fedresults {
+  main {
+    background: #fff;
+    min-height: 150px;
+  }
+
+  input[type="text"], input[type="email"], input[type="tel"], input[type="search"], input[type="url"], input[type="password"], .ui-autocomplete-input, textarea, .uneditable-input, select {
+    border-radius:0px;
+  }
 }
