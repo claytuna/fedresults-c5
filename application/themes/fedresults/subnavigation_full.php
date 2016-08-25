@@ -2,25 +2,8 @@
 defined('C5_EXECUTE') or die("Access Denied.");
 $this->inc('elements/header.php'); ?>
 
-<header class="page-title">
-  <div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <h1>TITLE</h1>
-    </div>
-  </div>
-  </div>
-</header>
-
-<nav class="sub-nav">
-  <div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      NAV
-    </div>
-  </div>
-  </div>
-</nav>
+<?php $this->inc('elements/page-title.php');?>
+<?php $this->inc('elements/sub-nav.php');?>
 
 <main role="main">
   <div class="container">

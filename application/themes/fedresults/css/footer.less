@@ -5,15 +5,22 @@
   height: 80px;
 
   &__left {
-    padding-top:10px;    
+    padding-top:10px;
   }
 
   &__right {
     text-align: center;
-    line-height: 80px;
+    .footer__copy {
+      width: 100%;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
 
     @media @tablet-up {
       text-align: right;
+      line-height: 80px;
+
+      .footer__copy { display: inline; }
     }
   }
 }

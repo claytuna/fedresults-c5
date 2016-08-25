@@ -1,14 +1,27 @@
+@import "var";
+
 .page-title {
   background: transparent url('../img/fedresults-banner.png') no-repeat;
-  background-position: cover;
+  background-size: cover;
 
   h1 {
     color: #fff;
     font-family: 'Lora', serif;
-    font-size: 40px; 
+    font-size: 40px;
     height: 140px;
     line-height: 140px;
     text-align: center;
     text-shadow: 2px 2px 9px rgba(0,0,0,.8);
+
+    &:after {
+      background: @fedRed;
+      bottom: 28%;
+      content: "";
+      display: block;
+      height: 2px;
+      margin: 0 auto;
+      position: relative;
+      width: 70px;
+    }
   }
 }

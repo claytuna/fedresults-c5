@@ -9,6 +9,11 @@
     &--primary {
       background:@fedRed;
       color: #fff;
+      transition: background .3s ease;
+
+      &:hover, &:active, &:focus {
+        background:@fedRedDark;
+      }
     }
 
     &--sm {
