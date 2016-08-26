@@ -7,4 +7,37 @@
 
 @sm-height:28px;
 
+.font-lora(){
+  font-family: 'Lora', serif;
+}
+.font-sans(){
+  font-family: 'Open Sans', sans-serif;
+}
+
+.callout-bg(){
+  background: transparent url('../img/fedresults-banner.png') center center no-repeat;
+  background-size: cover;
+}
+
+.callout-title(){
+  color: #fff;
+  .font-lora;
+  position: relative;
+  text-align: center;
+  text-shadow: 2px 2px 9px rgba(0,0,0,.8);
+}
+
+.red-underline(){
+  display:block;
+  content:"";
+  background: @fedRed;
+  bottom: -8px;
+  content: "";
+  display: block;
+  height: 2px;
+  margin: 0 auto;
+  position: relative;
+  width: 70px;
+}
+
 @tablet-up: ~"screen and (min-width:768px)";

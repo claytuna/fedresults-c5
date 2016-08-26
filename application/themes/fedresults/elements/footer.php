@@ -22,7 +22,7 @@
 <footer class="footer" role="contentinfo">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-xs-12 col-sm-2">
         <div class="footer__left">
           <?php
           $a = new GlobalArea('Footer Site Logo');
@@ -30,7 +30,7 @@
           ?>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-xs-12 col-sm-10">
         <div class="footer__right">
           <p> <span class="footer__copy">&copy;<?php echo date('Y');?> FedResults. All Rights Reserved.</span>
             <a href="https://www.facebook.com/fedresults/" class="btn btn--primary btn--social" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>

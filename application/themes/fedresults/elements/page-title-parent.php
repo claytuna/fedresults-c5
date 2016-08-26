@@ -5,7 +5,8 @@
   <div class="row">
     <div class="col-xs-12">
       <h1><?php
-        echo $c->getCollectionName();
+        $parent = page::getByID($c->getCollectionParentID());
+        echo $parent->getCollectionName();
       ?></h1>
     </div>
   </div>

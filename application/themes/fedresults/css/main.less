@@ -1,5 +1,6 @@
 @import "var";
 
+/*template*/
 @import "./header.less";
 @import "./contact-us.less";
 @import "./footer.less";
@@ -7,8 +8,12 @@
 @import "./page-title.less";
 @import "./sub-nav.less";
 
+/*blocks*/
+@import "./blocks/fed-splash.less";
+
 body {
   background: @grayBlack;
+  .font-sans;
 }
 
 .fedresults {
@@ -18,11 +23,23 @@ body {
     padding: 50px 0;
   }
 
+  .home {
+    padding:0;
+  }
+
   input[type="text"], input[type="email"], input[type="tel"], input[type="search"], input[type="url"], input[type="password"], .ui-autocomplete-input, textarea, .uneditable-input, select {
     border-radius:0px;
   }
-}
 
-body, p, input, a {
-  font-family: 'Open Sans', sans-serif;
+  /*typography*/
+  h2 {
+    color: @fedRed;
+    .font-lora;
+    font-size: 28px;
+    margin-bottom: 30px;
+    padding: 0;
+  }
+  p, input, a {
+    .font-sans;
+  }
 }

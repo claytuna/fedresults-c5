@@ -4,7 +4,15 @@
   .btn {
     border: 0;
     border-radius: 0;
-    padding: 0 10px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 13px;
+    height: 45px;
+    letter-spacing: 1px;
+    line-height: 45px;
+    margin-bottom: 10px;
+    padding: 0 25px;
+    text-transform: uppercase;
 
     &--primary {
       background:@fedRed;
@@ -21,10 +29,15 @@
       line-height: @sm-height;
     }
 
+    &--center {
+      margin: 0 auto;
+      display: table;
+    }
+
     &--social {
       height: @sm-height;
       line-height: @sm-height;
-      margin-right: 5px;
+      margin: 0 5px 0;
       padding: 0;
       width: @sm-height;
     }

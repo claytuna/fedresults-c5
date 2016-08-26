@@ -24,10 +24,12 @@ $displayThirdColumn = $blocks > 0 || $c->isEditMode();
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-3">
-                <?php
-                $a = new GlobalArea('Header Site Logo');
-                $a->display();
-                ?>
+                <div class="header-nav__logo">
+                  <?php
+                  $a = new GlobalArea('Header Site Logo');
+                  $a->display();
+                  ?>
+                </div>
             </div>
             <div class="col-xs-12 col-sm-9" role="navigation">
                 <?php
