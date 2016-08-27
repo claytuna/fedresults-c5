@@ -5,19 +5,16 @@
 
   h1 {
     font-size: 40px;
-    height: 140px;
-    line-height: 140px;
+    margin: 0;
+    padding: 20px 20px 40px;
     .callout-title;
 
+    @media @tablet-up {
+      padding: 38px 20px 55px;
+    }
+
     &:after {
-      background: @fedRed;
-      bottom: 28%;
-      content: "";
-      display: block;
-      height: 2px;
-      margin: 0 auto;
-      position: relative;
-      width: 70px;
+      .red-underline;
     }
   }
 }
