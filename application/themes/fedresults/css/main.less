@@ -8,10 +8,10 @@
 @import "./btn.less";
 @import "./page-title.less";
 @import "./sub-nav.less";
-@import "./block-dev.less";
 
 /*blocks*/
 @import "./blocks/fed-splash.less";
+@import "./blocks/fed-events-slider.less";
 @import "./blocks/fed-learn-more.less";
 @import "./blocks/fed-blog-entry.less";
 @import "./blocks/fed-contact-info.less";
@@ -50,9 +50,11 @@ body {
     font-size: 30px;
     .font-lora;
     margin-bottom: 34px;
+    text-align: center;
     &:after{ .red-underline; }
 
     &.title-underline--left {
+      text-align: left;
       &:after{ .red-underline-left; }
     }
   }
