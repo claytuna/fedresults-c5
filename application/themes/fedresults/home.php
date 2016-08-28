@@ -10,7 +10,7 @@ $this->inc('elements/header.php'); ?>
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-        <h2>When Results Matter</h2>
+        <h2>Upcoming events</h2>
         <p>Providing Proven IT Solutions for Federal, State, and Local Governments</p>
         <a href="/" class="btn btn--primary">Learn more</a>
         </div>

@@ -10,10 +10,12 @@
         ?>
       </div>
       <div class="col-xs-12 col-sm-8 col-lg-9">
+        <div class="contact-us__form">
         <?php
         $a = new GlobalArea('Footer Contact Form');
         $a->display();
         ?>
+        </div>
       </div>
     </div>
   </div>

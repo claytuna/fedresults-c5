@@ -14,6 +14,7 @@
 @import "./blocks/fed-splash.less";
 @import "./blocks/fed-learn-more.less";
 @import "./blocks/fed-blog-entry.less";
+@import "./blocks/fed-contact-info.less";
 
 body {
   background: @grayBlack;
@@ -45,6 +46,17 @@ body {
     margin:0 0 10px;
   }
 
+  .title-underline {
+    font-size: 30px;
+    .font-lora;
+    margin-bottom: 34px;
+    &:after{ .red-underline; }
+
+    &.title-underline--left {
+      &:after{ .red-underline-left; }
+    }
+  }
+
   .text-subtitle--red {
     color: @fedRed;
     .font-lora;
@@ -54,5 +66,15 @@ body {
   }
   p, input, a {
     .font-sans;
+  }
+
+  a {
+    color:@fedRed;
+    &:hover, &:active, &:focus { color: @fedRedDark; }
+  }
+
+  a[href^="tel:"] {
+    color:inherit;
+    &:hover, &:active, &:focus { color: @fedRedDark; text-decoration: none; }
   }
 }
