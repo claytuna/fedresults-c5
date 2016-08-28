@@ -4,6 +4,7 @@
 @import "./header.less";
 @import "./contact-us.less";
 @import "./footer.less";
+@import "./hr-checkmark.less";
 @import "./btn.less";
 @import "./page-title.less";
 @import "./sub-nav.less";
@@ -11,6 +12,7 @@
 
 /*blocks*/
 @import "./blocks/fed-splash.less";
+@import "./blocks/fed-learn-more.less";
 @import "./blocks/fed-blog-entry.less";
 
 body {
@@ -34,7 +36,16 @@ body {
   }
 
   /*typography*/
-  h2 {
+  h1,h2,h3 {
+    .font-lora;
+    margin:0 0 15px;
+  }
+
+  h4,h5,h6 {
+    margin:0 0 10px;
+  }
+
+  .text-subtitle--red {
     color: @fedRed;
     .font-lora;
     font-size: 28px;

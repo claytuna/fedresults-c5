@@ -4,28 +4,7 @@ $this->inc('elements/header.php'); ?>
 
 <main role="main" class="home">
 
-  <div class="fed-splash">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-        <h1 class="fed-splash__title">When Results Matter</h1>
-        <p class="fed-splash__text">Providing Proven IT Solutions for Federal, State, and Local Governments</p>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="fed-learn-more">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-        <h2>When Results Matter</h2>
-        <p>Providing Proven IT Solutions for Federal, State, and Local Governments</p>
-        <a href="/" class="btn btn--primary btn--center">Learn more</a>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div class="fed-article-slider">
     <div class="container">
