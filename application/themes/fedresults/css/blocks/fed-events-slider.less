@@ -4,13 +4,12 @@
   background: @fedRed url("../../img/bg-red-gradient.jpg") center center no-repeat;
   background-size: cover;
   padding: 20px 0;
-  position: relative;
 
   @media @tablet-up {
     padding: 60px;
   }
 
-  &__title {
+  &__main-title {
     .title-underline {
       color: #fff;
     }
@@ -18,9 +17,108 @@
 
   &__container {
     padding: 0 40px;
+    position: relative;
+
     @media @tablet-up {
       padding: 0 110px;
     }
   }
+
+  &__slide {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  &__thumbnail {
+    display: block;
+    margin-bottom: 25px;
+    overflow: hidden;
+  }
+
+  &__text {
+    .mb-c;
+  }
+
+  &__date {
+    .mb-img;
+    color: #fff;
+    display: block;
+    line-height: 16px;
+    padding: 8px 5px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media @tablet-up {
+      padding: 15px 15px 0 0;
+    }
+
+    &-month {
+      font-size: 16px;
+      font-weight: @font-bold;
+      display: block;
+      margin: 0 0 10px;
+    }
+    &-day {
+      display: block;
+      font-size: 45px;
+      line-height: 32px;
+      margin: 0 0 15px;
+    }
+    &-year {
+      font-size: 16px;
+      font-weight: @font-bold;
+      display: block;
+      margin: 0;
+    }
+  }
+
+  &__content {
+    .mb-bdy;
+    border-left: 1px solid #fff;
+    padding: 5px 13px;
+
+    @media @tablet-up {
+      padding: 8px 27px;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    display: inline-block;
+    .font-lora;
+    font-weight: @font-bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+
+    @media @tablet-up {
+      font-size: 21px;
+    }
+
+    &:hover, &:active, &:focus { color: #fff; text-decoration: none; }
+  }
+
+  &__desc {
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 13px;
+  }
+
+  &__read-more a {
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    &:hover, &:active, &:focus { color: #fff; text-decoration: none; }
+  }
+
+  .rslides_nav {
+      &.next { background: transparent url("../../img/arrow-right-white.png") center center no-repeat; }
+      &.prev { background: transparent url("../../img/arrow-left-white.png") center center no-repeat; }
+
+      transition: opacity .3s ease;
+
+      &:hover, &:active, &:focus { opacity: 1; }
+  }
+
 }
 }
