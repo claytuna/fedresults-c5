@@ -14,7 +14,10 @@ if ($c->isEditMode()) { ?>
 
         <?php if(count($rows) > 0) { ?>
         <div class="fed-grid__wrapper" id="fed-grid-entry-<?php echo $bID ?>">
-            <?php foreach($rows as $row) { ?>
+          <div class="row">
+            <?php foreach($rows as $idx=>$row) { ?>
+                <?php if($idx !== 0 && $idx % 3 == 0) { echo '</div><div class="row">';}?>
+                  
                 <div class="col-xs-12 col-sm-4">
                 <?php if($row['linkURL']) { ?>
                     <!--a href="<?php echo $row['linkURL'] ?>" class="mega-link-overlay"></a-->
@@ -45,7 +48,10 @@ if ($c->isEditMode()) { ?>
 
               </div><!--end grid col-->
 
+
+
             <?php } ?>
+            </div>
         </div>
         <?php } else { ?>
         <div class="ccm-image-slider-placeholder">
