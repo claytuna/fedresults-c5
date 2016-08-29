@@ -1,0 +1,38 @@
+@import "../var";
+.fedresults {
+  .fed-grid {
+    padding: 20px;
+
+    @media @tablet-up {
+        padding:118px;
+    }
+
+    &__icon img{
+      display: block;
+      height: auto;
+      margin: 0 auto 25px;
+      max-height: 30px;
+      max-width: 25px;
+    }
+
+    &__content {
+      margin-bottom: 50px;
+    }
+
+    &__title {
+      color: #000;
+      font-size: 20px;
+      font-weight: @font-bold;
+      .font-lora;
+      line-height: 19px;
+      text-align: center;
+    }
+
+    &__desc {
+      color: #636466;
+      text-align: center;
+      p { color: #636466;}
+    }
+
+  }
+}

@@ -4,20 +4,6 @@ $this->inc('elements/header.php'); ?>
 
 <main role="main" class="home">
 
-
-
-  <div class="fed-article-slider">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-        <h2>Upcoming events</h2>
-        <p>Providing Proven IT Solutions for Federal, State, and Local Governments</p>
-        <a href="/" class="btn btn--primary">Learn more</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="fed-grid">
     <div class="container">
       <div class="row">
