@@ -318,7 +318,7 @@ echo Core::make('helper/concrete/ui')->tabs(array(
         <button type="button" class="btn btn-default ccm-edit-slide" data-slide-close-text="<?php echo t('Collapse Slide'); ?>" data-slide-edit-text="<?php echo t('Edit Slide'); ?>"><?php echo t('Edit Slide'); ?></button>
         <button type="button" class="btn btn-danger ccm-delete-image-slider-entry"><?php echo t('Remove'); ?></button>
         <i class="fa fa-arrows"></i>
-        <div class="form-group">
+        <!--div class="form-group">
             <label><?php echo t('Image'); ?></label>
             <div class="ccm-pick-slide-image">
                 <% if (image_url.length > 0) { %>
@@ -337,21 +337,20 @@ echo Core::make('helper/concrete/ui')->tabs(array(
             <label><?php echo t('Description'); ?></label>
             <div class="redactor-edit-content"></div>
             <textarea style="display: none" class="redactor-content" name="<?php echo $view->field('description'); ?>[]"><%=description%></textarea>
-        </div>
+        </div-->
         <div class="form-group" >
-           <label><?php echo t('Link'); ?></label>
+           <label><?php echo t('Select event page type'); ?></label>
             <select data-field="entry-link-select" name="linkType[]" class="form-control" style="width: 60%;">
-                <option value="0" <% if (!link_type) { %>selected<% } %>><?php echo t('None'); ?></option>
-                <option value="1" <% if (link_type == 1) { %>selected<% } %>><?php echo t('Another Page'); ?></option>
-                <option value="2" <% if (link_type == 2) { %>selected<% } %>><?php echo t('External URL'); ?></option>
+                <option value="0" <% if (!link_type) { %>selected<% } %>><?php echo t('--Select page--'); ?></option>
+                <option value="1" <% if (link_type == 1) { %>selected<% } %>><?php echo t('Event page'); ?></option>
             </select>
         </div>
         <div data-field="entry-link-url" class="form-group hide-slide-link">
            <label><?php echo t('URL:'); ?></label>
             <textarea name="linkURL[]"><%=link_url%></textarea>
         </div>
-        <div data-field="entry-link-page-selector" class="form-group hide-slide-link">
-           <label><?php echo t('Choose Page:'); ?></label>
+        <div data-field="entry-link-page-selector" class="form-group">
+           <label><?php echo t('Choose Event page:'); ?></label>
             <div data-field="entry-link-page-selector-select"></div>
         </div>
         <input class="ccm-image-slider-entry-sort" type="hidden" name="<?php echo $view->field('sortOrder'); ?>[]" value="<%=sort_order%>"/>
