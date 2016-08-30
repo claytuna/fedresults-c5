@@ -4,8 +4,8 @@ $fp = FilePermissions::getGlobal();
 $tp = new TaskPermission();
 
 echo Core::make('helper/concrete/ui')->tabs(array(
-    array('slides', t('Grid Columns'), true),
-    array('options', t('Options'))
+    array('slides', t('Solutions'), true),
+    array('options', t('Meta Options'))
 ));
 ?>
 
@@ -270,7 +270,20 @@ echo Core::make('helper/concrete/ui')->tabs(array(
 </div>
 
 <div id="ccm-tab-content-options" class="ccm-tab-content">
-    <p>No options currently available.</p>
+    <label class="control-label"><?php echo t('Meta Title and Description'); ?></label>
+
+    <div class="form-group">
+        <?php echo $form->label('metaTitle', t('Title')); ?>
+        <div class="input-group" style="width: 100%">
+        <?php echo $form->text('metaTitle', $metaTitle ? $metaTitle : 'Technologies to Support Missions')?>
+        </div>
+    </div>
+    <div class="form-group">
+        <?php echo $form->label('metaDescription', t('Description')); ?>
+        <div class="input-group" style="width: 100%">
+        <?php echo $form->textarea('metaDescription', $metaDescription ? $metaDescription : '')?>
+        </div>
+    </div>
 </div>
 
 <script type="text/template" id="imageTemplate">

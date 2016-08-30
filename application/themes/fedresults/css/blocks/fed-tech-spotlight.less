@@ -1,0 +1,60 @@
+@import "../var";
+.fedresults {
+  .fed-tech-spotlight {
+    background: #000 url("../../img/bg-diagonal-dark.jpg") center center repeat;
+    border-bottom: 15px solid @fedRed;
+    padding: 20px 10px;
+
+    @media @tablet-up {
+        padding:65px 10px;
+    }
+
+    &__meta-title {
+      color: #fff;
+      text-align: center;
+    }
+
+    &__meta-desc {
+      color: #fff;
+      display: block;
+      text-align: center;
+      margin: 0 auto 55px;
+      max-width: 960px;
+    }
+
+    &__callout {
+      background: rgba(0,0,0,.4);
+      border: 1px solid #000;
+      padding: 28px 0;
+    }
+
+    &__icon img{
+      display: block;
+      height: auto;
+      margin: 0 auto 25px;
+      max-height: 125px;
+      max-width: 121px;
+    }
+
+    &__content {
+      margin-bottom: 50px;
+    }
+
+    &__title {
+      color: #fff;
+      font-size: 20px;
+      font-weight: @font-bold;
+      .font-lora;
+      line-height: 19px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    &__desc {
+      color: #fff;
+      text-align: center;
+      p { color: #fff;}
+    }
+
+  }
+}

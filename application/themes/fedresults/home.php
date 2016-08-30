@@ -4,25 +4,6 @@ $this->inc('elements/header.php'); ?>
 
 <main role="main" class="home">
 
-  <div class="fed-grid">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-4">
-        <h3>Security &amp; Management</h3>
-        <p>BLURB</p>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-        <h3>Big Data</h3>
-        <p>BLURB</p>
-        </div>
-        <div class="col-xs-12 col-sm-4">
-        <h3>Storage</h3>
-        <p>BLURB</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="fed-tech-callout">
     <div class="container">
       <div class="row">
