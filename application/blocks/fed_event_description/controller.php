@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\Block\SampleSingleBlock;
+namespace Application\Block\FedEventDescription;
 
 use Core;
 use Database;
@@ -12,7 +12,7 @@ class Controller extends BlockController
 {
     protected $btInterfaceWidth = 400;
     protected $btInterfaceHeight = 550;
-    protected $btTable = 'btContentImage';
+    protected $btTable = 'btEventDescription';
     protected $btCacheBlockRecord = true;
     protected $btCacheBlockOutput = true;
     protected $btCacheBlockOutputOnPost = true;
@@ -29,12 +29,12 @@ class Controller extends BlockController
      */
     public function getBlockTypeDescription()
     {
-        return t("Adds images and onstates from the library to pages.");
+        return t("Event description: image, date, time, link, etc.");
     }
 
     public function getBlockTypeName()
     {
-        return t("*** SAMPLE ***");
+        return t("Event Description - FedResults");
     }
 
     public function registerViewAssets($outputContent = '')
@@ -48,23 +48,10 @@ class Controller extends BlockController
     public function view()
     {
         $f = File::getByID($this->fID);
-        if (!is_object($f) || !$f->getFileID()) {
-            return false;
-        }
 
-        // onState image available
-        $foS = $this->getFileOnstateObject();
-        if (is_object($foS)) {
-            $imgPath = array();
-            $imgPath['hover'] = File::getRelativePathFromID($this->fOnstateID);
-            $imgPath['default'] = File::getRelativePathFromID($this->fID);
-            $this->set('imgPath', $imgPath);
-            $this->set('foS', $foS);
-        }
-
+        $this->set('fImg', File::getByID($this->fID));
         $this->set('f', $f);
         $this->set('altText', $this->getAltText());
-        $this->set('title', $this->getTitle());
         $this->set('linkURL', $this->getLinkURL());
     }
 
@@ -124,11 +111,6 @@ class Controller extends BlockController
     public function getAltText()
     {
         return $this->altText;
-    }
-
-    public function getTitle()
-    {
-        return isset($this->title) ? $this->title : null;
     }
 
     public function getExternalLink()

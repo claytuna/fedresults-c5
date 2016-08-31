@@ -1,0 +1,63 @@
+@import "../var";
+.fedresults {
+  .fed-event-description {
+
+    border-bottom: 1px solid #dadada;
+    padding: 0 0 21px;
+
+    &__back {
+      display: inline-block;
+      font-weight: @font-bold;
+      padding-bottom: 13px;
+    }
+
+    &__img img {
+      display: block;
+      max-width: 100%;
+    }
+
+    &__text {
+      i {
+        background-repeat: no-repeat;
+        height: 20px;
+        width: 20px;
+        margin-right: 8px;
+        .mb-img;
+      }
+
+      .item {
+        font-weight: @font-bold;
+        text-transform: uppercase;
+        .mb-c;
+        margin-bottom: 8px;
+
+        p { .mb-bdy; }
+      }
+
+      .date {
+        i {
+          background-image:url("../../img/icon-calendar.png");
+        }
+      }
+
+      .time {
+        i {
+          background-image:url("../../img/icon-time.png");
+        }
+      }
+
+      .location {
+        i {
+          background-image:url("../../img/icon-location.png");
+        }
+      }
+
+      .map-link {
+        display: inline-block;
+        margin-bottom: 15px;
+        padding-left: 30px;
+      }
+
+    }
+  }
+}

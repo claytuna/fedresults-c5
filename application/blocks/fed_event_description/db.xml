@@ -3,7 +3,7 @@
   xmlns="http://www.concrete5.org/doctrine-xml/0.5"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.concrete5.org/doctrine-xml/0.5 http://concrete5.github.io/doctrine-xml/doctrine-xml-0.5.xsd">
 
-  <table name="btContentImage">
+  <table name="btEventDescription">
     <field name="bID" type="integer">
       <unsigned/>
       <key/>
@@ -12,25 +12,19 @@
       <unsigned/>
       <default value="0"/>
     </field>
-    <field name="fOnstateID" type="integer">
-      <unsigned/>
-      <default value="0"/>
-    </field>
-    <field name="maxWidth" type="integer">
-      <unsigned/>
-      <default value="0"/>
-    </field>
-    <field name="maxHeight" type="integer">
-      <unsigned/>
-      <default value="0"/>
-    </field>
+    <field name="btnText" type="string" size="255"/>
+    <field name="eventDate" type="string" size="255"/>
+    <field name="eventTime" type="string" size="255"/>
+    <field name="eventLocation" type="text"/>
+    <field name="eventStreet" type="text"/>
+    <field name="eventLocale" type="text"/>
+    <field name="mapLink" type="string" size="255"/>
     <field name="externalLink" type="string" size="255"/>
     <field name="internalLinkCID" type="integer">
       <unsigned/>
       <default value="0"/>
     </field>
-    <field name="altText" type="string" size="255"/>
-    <field name="title" type="string" size="255"/>
+    <field name="altText" type="text"/>
     <index name="fID">
       <col>fID</col>
     </index>
