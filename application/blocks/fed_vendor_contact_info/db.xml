@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  xmlns="http://www.concrete5.org/doctrine-xml/0.5"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.concrete5.org/doctrine-xml/0.5 http://concrete5.github.io/doctrine-xml/doctrine-xml-0.5.xsd">
+
+  <table name="btFedVendorContactInfo">
+    <field name="bID" type="integer">
+      <unsigned/>
+      <key/>
+    </field>
+    <field name="vendorTitle" type="string" size="256"/>
+    <field name="vendorSolutionTitle" type="string" size="256"/>
+    <field name="titlePhone" type="string" size="128"/>
+    <field name="subtitlePhone" type="string" size="128"/>
+    <field name="mainPhone" type="string" size="128"/>
+    <field name="fax" type="string" size="128"/>
+    <field name="email" type="string" size="128"/>
+    <field name="addressTitle" type="string" size="128"/>
+    <field name="address1" type="string" size="256"/>
+    <field name="address2" type="string" size="256"/>
+    <field name="address3" type="string" size="256"/>
+    <field name="city" type="string" size="256"/>
+    <field name="stateProvince" type="string" size="256"/>
+    <field name="postalCode" type="string" size="256"/>
+  </table>
+
+</schema>

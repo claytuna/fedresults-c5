@@ -52,18 +52,21 @@ class Controller extends BlockController
             return false;
         }
 
-        // onState image available
-        $foS = $this->getFileOnstateObject();
-        if (is_object($foS)) {
-            $imgPath = array();
-            $imgPath['hover'] = File::getRelativePathFromID($this->fOnstateID);
-            $imgPath['default'] = File::getRelativePathFromID($this->fID);
-            $this->set('imgPath', $imgPath);
-            $this->set('foS', $foS);
+        $fIcon = File::getByID($this->fOnstateID);
+        $this->set('fIcon', File::getByID($this->fOnstateID));
+        if(is_object($fIcon)){
+          $this->set('iconPath', File::getRelativePathFromID( $this->fOnstateID ));
+        }
+
+        $fBackground = File::getByID($this->fID);
+        $this->set('fBackground', File::getByID($this->fID));
+        if(is_object($fBackground)){
+          $this->set('bgPath', File::getRelativePathFromID( $this->fID ));
         }
 
         $this->set('f', $f);
         $this->set('altText', $this->getAltText());
+        $this->set('desc', $this->getAltText());
         $this->set('title', $this->getTitle());
         $this->set('linkURL', $this->getLinkURL());
     }

@@ -1,50 +1,37 @@
 <?php defined('C5_EXECUTE') or die("Access Denied.");
+$c = Page::getCurrentPage();?>
 
-$c = Page::getCurrentPage();
-if (is_object($f)) {
-    if ($maxWidth > 0 || $maxHeight > 0) {
-        $im = Core::make('helper/image');
-        $thumb = $im->getThumbnail(
-            $f,
-            $maxWidth,
-            $maxHeight
-        ); //<-- set these 2 numbers to max width and height of thumbnails
-        $tag = new \HtmlObject\Image();
-        $tag->src($thumb->src)->width($thumb->width)->height($thumb->height);
-    } else {
-        $image = Core::make('html/image', array($f));
-        $tag = $image->getTag();
-    }
-    $tag->addClass('ccm-image-block img-responsive bID-'.$bID);
-    if ($altText) {
-        $tag->alt(h($altText));
-    } else {
-        $tag->alt('');
-    }
-    if ($title) {
-        $tag->title(h($title));
-    }
-    if ($linkURL):
-        print '<a href="' . $linkURL . '">';
-    endif;
+  <div class="fed-featured-solution" style="background-image:url(<?php print $bgPath;?>);">
+    <div class="fed-featured-solution__content">
+      <div class="fed-featured-solution__icon">
+        <?php
+        $iconObj = File::getByID($fIcon);
+        ?>
+        <?php if(is_object($iconObj)) {
+            $tag = Core::make('html/image', array($iconObj, false))->getTag();
+            if($title) {
+              $tag->alt($title . '- Featured Solution Icon');
+            }else{
+              $tag->alt("Featured Solution Icon");
+            }
+            print $tag; ?>
+        <?php } ?>
+      </div>
+      <div class="fed-featured-solution__text">
+        <?php
+        if ($title) {
+            print '<p class="fed-featured-solution__title">' . $title . '</p>';
+        }
 
-    print $tag;
+        if ($desc) {
+            print '<div class="fed-featured-solution__desc"><p>' . $desc . '</p></div>';
+        }
 
-    if ($linkURL):
-        print '</a>';
-    endif;
-} else if ($c->isEditMode()) { ?>
+        if ($linkURL){
+            print '<a class="fed-featured-solution__read-more" href="' . $linkURL . '">Learn more >></a>';
+        }?>
+      </div>
+    </div>
 
-    <div class="ccm-edit-mode-disabled-item"><?php echo t('Empty Image Block.')?></div>
 
-<?php } ?>
-
-<?php if(isset($foS) && is_object($foS)) { ?>
-<script>
-$(function() {
-    $('.bID-<?php print $bID;?>')
-        .mouseover(function(e){$(this).attr("src", '<?php print $imgPath["hover"];?>');})
-        .mouseout(function(e){$(this).attr("src", '<?php print $imgPath["default"];?>');});
-});
-</script>
-<?php } ?>
+  </div>

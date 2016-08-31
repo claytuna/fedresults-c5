@@ -2,5 +2,60 @@
 .fedresults {
   .fed-featured-solution {
       color: #fff;
+
+      background-color:@fedRed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      margin-bottom: 20px;
+      padding: 20px;
+
+      @media @tablet-up {
+        margin-bottom: 55px;
+        padding: 55px;
+      }
+
+      &__content {
+        .mb-c;
+      }
+
+      &__icon {
+
+        margin:0 auto 13px;
+
+        @media @tablet-up {
+          .mb-img;
+          max-width: 30%;
+          margin-right: 21px;
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+          margin:0 auto;
+        }
+      }
+
+      &__text {
+        .mb-bdy;
+        padding: 0 21px;
+      }
+
+      &__title {
+        .font-lora;
+        font-weight: @font-bold;
+        font-size: 20px;
+      }
+
+      &__desc {
+        margin-bottom: 20px;
+        max-width: 525px;
+      }
+
+      &__read-more {
+        font-weight: @font-bold;
+        text-transform: uppercase;
+      }
   }
 }

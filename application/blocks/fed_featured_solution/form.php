@@ -1,13 +1,13 @@
-<?php  
+<?php
 defined('C5_EXECUTE') or die("Access Denied.");
 $al = Core::make('helper/concrete/asset_library');
 $bf = null;
 $bfo = null;
 
-if ($controller->getFileID() > 0) { 
+if ($controller->getFileID() > 0) {
 	$bf = $controller->getFileObject();
 }
-if ($controller->getFileOnstateID() > 0) { 
+if ($controller->getFileOnstateID() > 0) {
 	$bfo = $controller->getFileOnstateObject();
 
 }
@@ -29,11 +29,11 @@ if ($maxHeight == 0) {
 ?>
 
 <div class="form-group">
-	<label class="control-label"><?php echo t('Image')?></label>
+	<label class="control-label"><?php echo t('Background Image')?></label>
 	<?php echo $al->image('ccm-b-image', 'fID', t('Choose Image'), $bf, $args);?>
 </div>
 <div class="form-group">
-	<label class="control-label"><?php echo t('Image Hover')?> <small style="color:#999999; font-weight: 200;"><?php echo t('(Optional)'); ?></small></label>
+	<label class="control-label"><?php echo t('Icon')?> <small style="color:#999999; font-weight: 200;"><?php echo t('(Optional)'); ?></small></label>
 	<?php echo $al->image('ccm-b-image-onstate', 'fOnstateID', t('Choose Image On-State'), $bfo, $args);?>
 </div>
 
@@ -44,7 +44,7 @@ if ($maxHeight == 0) {
     <legend><?php echo t('HTML')?></legend>
 
 <div class="form-group">
-	<?php echo $form->label('imageLinkType', t('Image Link'))?>
+	<?php echo $form->label('imageLinkType', t('Read More Link'))?>
 	<select name="linkType" id="imageLinkType" class="form-control" style="width: 60%;">
 		<option value="0" <?php echo (empty($externalLink) && empty($internalLinkCID) ? 'selected="selected"' : '')?>><?php echo t('None')?></option>
 		<option value="1" <?php echo (empty($externalLink) && !empty($internalLinkCID) ? 'selected="selected"' : '')?>><?php echo t('Another Page')?></option>
@@ -62,20 +62,19 @@ if ($maxHeight == 0) {
 	<?php echo $form->text('externalLink', $externalLink, array('style'=>'width: 60%;')); ?>
 </div>
 
-
-<div class="form-group">
-	<?php echo $form->label('altText', t('Alt. Text'))?>
-	<?php echo $form->text('altText', $altText, array('style'=>'width: 60%;')); ?>
-</div>
-
 <div class="form-group">
     <?php echo $form->label('title', t('Title'))?>
     <?php echo $form->text('title', $title, array('style'=>'width: 60%;')); ?>
 </div>
 
+<div class="form-group">
+	<?php echo $form->label('altText', t('Solution Text'))?>
+	<?php echo $form->textarea('altText', $altText, array('style'=>'width: 60%;')); ?>
+</div>
+
 </fieldset>
 
-<fieldset>
+<!--fieldset>
     <legend><?php echo t('Resize Image')?></legend>
 
     <div class="form-group">
@@ -97,7 +96,7 @@ if ($maxHeight == 0) {
         </div>
     </div>
 
-</fieldset>
+</fieldset-->
 
 
 <script type="text/javascript">
