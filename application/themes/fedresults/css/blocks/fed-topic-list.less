@@ -1,0 +1,41 @@
+@import "../var";
+.fedresults {
+  .fed-topic-list {
+      margin-bottom: 55px;
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+          border-bottom: 1px solid #e3e3e3;
+          padding: 3px 34px 4px;
+
+          a {
+            color: #000;
+            font-weight: @font-bold;
+            transition: color .3s ease;
+
+            &:hover, &:active, &:focus {
+              color: @fedRedDark;
+            }
+          }
+
+          .fed-topic-list__topic--selected {
+            color: @fedRed;
+            position: relative;
+
+            &:before {
+              content:"<<";
+              display: block;
+              position: absolute;
+              left: -34px;
+              font-size: 10px;
+              top: 3px;
+            }
+          }
+      }
+  }
+}
