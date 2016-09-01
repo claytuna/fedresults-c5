@@ -27,7 +27,7 @@ $(document).ready(function(){
 });
 </script>
 <div class="fed-events-slider">
-  <div class="container">
+  <div class="NOCONTAINER">
     <div class="row">
       <div class="col-xs-12">
         <div class="fed-events-slider__main-title">
@@ -50,7 +50,7 @@ $(document).ready(function(){
                              /*print_r(count($rows))
                              print_r($key)*/?>
                             <?php if(is_object($page)){
-                              $thumbnail = $page->getAttribute('thumbnail'); 
+                              $thumbnail = $page->getAttribute('thumbnail');
                             }?>
 
                             <?php if (is_object($thumbnail)): ?>

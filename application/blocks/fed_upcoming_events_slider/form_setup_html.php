@@ -341,7 +341,6 @@ echo Core::make('helper/concrete/ui')->tabs(array(
         <div class="form-group" >
            <label><?php echo t('Select event page type'); ?></label>
             <select data-field="entry-link-select" name="linkType[]" class="form-control" style="width: 60%;">
-                <option value="0" <% if (!link_type) { %>selected<% } %>><?php echo t('--Select page--'); ?></option>
                 <option value="1" <% if (link_type == 1) { %>selected<% } %>><?php echo t('Event page'); ?></option>
             </select>
         </div>

@@ -38,7 +38,7 @@ $args = array();
     <legend><?php echo t('Event Details')?></legend>
 
 <div class="form-group">
-	<?php echo $form->label('imageLinkType', t('Read More Link'))?>
+	<?php echo $form->label('imageLinkType', t('Register Link'))?>
 	<select name="linkType" id="imageLinkType" class="form-control" style="width: 60%;">
 		<option value="0" <?php echo (empty($externalLink) && empty($internalLinkCID) ? 'selected="selected"' : '')?>><?php echo t('None')?></option>
 		<option value="1" <?php echo (empty($externalLink) && !empty($internalLinkCID) ? 'selected="selected"' : '')?>><?php echo t('Another Page')?></option>

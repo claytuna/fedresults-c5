@@ -1,7 +1,7 @@
 <?php defined('C5_EXECUTE') or die("Access Denied.");?>
 
   <div class="fed-event-description">
-    <a href="/news-events/" class="fed-event-description__back"><< BACK TO NEWS &amp; EVENTS</a>
+    <a href="/news-events/events" class="fed-event-description__back"><< BACK TO NEWS &amp; EVENTS</a>
     <div class="row">
 
       <div class="col-xs-12 col-sm-6">

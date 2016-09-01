@@ -34,7 +34,7 @@ class Controller extends BlockController
 
     public function getBlockTypeName()
     {
-        return t("Event Description - FedResults");
+        return t("Solution Title - FedResults");
     }
 
     public function registerViewAssets($outputContent = '')
