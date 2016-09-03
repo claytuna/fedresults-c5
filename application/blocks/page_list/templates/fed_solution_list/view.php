@@ -34,7 +34,7 @@ $dh = Core::make('helper/date'); /* @var $dh \Concrete\Core\Localization\Service
         $includeEntryText = true;
     }
 
-    foreach ($pages as $page):
+    foreach ($pages as $idx=>$page):
 
 		// Prepare data for each page being listed...
         $entryClasses = 'fed-solution-list';
